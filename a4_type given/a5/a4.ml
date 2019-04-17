@@ -405,7 +405,7 @@ let rec secdmachine stk env pgm dump =
     | pgx::pxs ->
       begin
         match pgx with 
-    2    | VAR x -> secdmachine ((extract_l env x)::stk) env pxs dump 
+        | VAR x -> secdmachine ((extract_l env x)::stk) env pxs dump 
         | NCONST x -> secdmachine ((Num x)::stk) env pxs dump
         | BCONST x -> secdmachine ((Bool x)::stk) env pxs dump
         | NOT -> begin 
